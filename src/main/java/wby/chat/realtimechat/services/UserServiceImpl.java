@@ -62,20 +62,6 @@ public class UserServiceImpl implements IServiceUser {
     }
 
 
-
-    public void verifyPhoneNumber(Long userId, String code) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
-        if (code.equals(user.getVerificationCode())) {
-            user.setTelVerif(true);
-            userRepository.save(user);
-            // You can add additional logic here if needed
-        } else {
-            // Handle incorrect verification code
-            throw new RuntimeException("Incorrect verification code");
-        }
-    }
     @Override
     public Boolean blockUser(Long id) {
         User user = userRepository.findById(id).orElse(null);
