@@ -7,6 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import wby.chat.realtimechat.configurations.JwtService;
+import wby.chat.realtimechat.entities.ERole;
 import wby.chat.realtimechat.entities.User;
 import wby.chat.realtimechat.repositories.UserRepository;
 

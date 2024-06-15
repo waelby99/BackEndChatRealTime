@@ -7,6 +7,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 @Entity
@@ -21,7 +23,9 @@ public class Message  implements Serializable {
     private long idMsg ;
 
     private String content;
+    private boolean seen;
+    private LocalDateTime sentOn;
+    private LocalDateTime seenOn;
 
-    @ManyToMany(mappedBy = "messageries",cascade= CascadeType.ALL)
-    private Set<User> users;
+
 }

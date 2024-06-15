@@ -28,10 +28,8 @@ public class User implements  UserDetails {
     public String tel;
     public String image;
     public ERole role ;
+    public boolean activated = true ;
 
-    @JsonIgnore
-    @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Message> messages;
 
 
 
